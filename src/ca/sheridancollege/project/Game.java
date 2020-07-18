@@ -12,52 +12,95 @@ import java.util.ArrayList;
  * child of this class and instantiate the methods given.
  * @author dancye, 2018
  */
-public abstract class Game 
+public class Game 
 {
-    private final String gameName;//the title of the game
-    private ArrayList <Player> players;// the players of the game
     
-    public Game(String givenName)
+        private int Player1score = 0;
+	private int Player2score = 0;
+	private Card deck1;
+	private Card deck2;
+	private GroupOfCards deck;
+	private Card player1Card;
+	private Card player2Card;
+    
+    /**
+	 * Play the game. This might be one method or many method calls depending
+	 * on your game.
+	 */
+    public void play()
     {
-        gameName = givenName;
-        players = new ArrayList();
+        
     }
 
-    /**
-     * @return the gameName
-     */
-    public String getGameName() 
-    {
-        return gameName;
-    }
-    
-     /**
-     * @return the players of this game
-     */
-    public ArrayList <Player> getPlayers() 
-    {
-        return players;
-    }
+	/**
+	 * 
+	 * @param player1
+	 * @param player2
+	 * @param player1Card
+	 * @param player2Card
+	 */
+	public void war(Player player1, Player player2, Card player1Card, Card player2Card) {
+		// TODO - implement Game.war
+		throw new UnsupportedOperationException();
+	}
 
-    /**
-     * @param players the players of this game
-     */
-    public void setPlayers(ArrayList <Player> players) 
-    {
-        this.players = players;
-    }
-    
-    /**
-     * Play the game. This might be one method or many method calls depending
-     * on your game.
-     */
-    public abstract void play();
-    
-    /**
-     * When the game is over, use this method to declare and display a winning
-     * player.
-     */
-    public abstract void declareWinner();
+	/**
+	 * 
+	 * @param winner
+	 * @param looser
+	 * @param winnerScore
+	 * @param looserScore
+	 * @param winnerSize
+	 * @param looserSize
+	 */
+	public void roundWinner(Player winner, Player looser, int winnerScore, int looserScore, int winnerSize, int looserSize) {
+		// TODO - implement Game.roundWinner
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * 
+	 * @param deck1
+	 * @param deck2
+	 */
+	public boolean isEmpty(ArrayList<Card> deck1, ArrayList<Card> deck2) {
+		// TODO - implement Game.isEmpty
+		//throw new UnsupportedOperationException();
+                return true;
+	}
+
+	/**
+	 * 
+	 * @param deck1
+	 * @param deck2
+	 * @param player1
+	 * @param player2
+	 */
+	public void displayWinner(ArrayList<Card> deck1, ArrayList<Card> deck2, Player player1, Player player2) {
+		// TODO - implement Game.displayWinner
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * 
+	 * @param player1
+	 * @param player2
+	 */
+	public void displayWinnerBetween(Player player1, Player player2) {
+		// TODO - implement Game.displayWinnerBetween
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * 
+	 * @param winner
+	 */
+	public void displayString(String winner) {
+		// TODO - implement Game.displayString
+		throw new UnsupportedOperationException();
+	}
+
+	
 
    
     

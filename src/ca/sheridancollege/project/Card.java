@@ -7,20 +7,45 @@ package ca.sheridancollege.project;
 
 /**
  * A class to be used as the base Card class for the project. Must be general
- * enough to be instantiated for any Card game. Students wishing to add to the code 
+ * enough to be instantiated for any Card game. Students wishing to add to the code
  * should remember to add themselves as a modifier.
  * @author dancye, 2018
  */
-public abstract class Card 
+public class Card 
 {
-    //default modifier for child classes
-    
-    /**
-     * Students should implement this method for their specific children classes 
-     * @return a String representation of a card. Could be an UNO card, a regular playing card etc.
-     */
-    
-    @Override
-    public abstract String toString();
+
+	private Rank rank;
+	private Suit suit;
+        
+        public enum Suit{HEARTS, CLUBS, SPADES, DIAMONDS};
+        public enum Rank{ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING};
+
+	/**
+	 * 
+	 * @param s
+	 * @param r
+	 */
+	public Card(Suit s, Rank r) {
+		// TODO - implement Card.Card
+		//throw new UnsupportedOperationException();
+                setSuit(s);
+                setRank(r);
+	}
+        
+        public Rank getRank() {
+        return this.rank;
+        }
+
+        public Suit getSuit() {
+            return this.suit;
+        }
+
+        public void setRank(Rank rank) {
+            this.rank = rank;
+        }
+
+        public void setSuit(Suit suit) {
+            this.suit = suit;
+        }
     
 }
