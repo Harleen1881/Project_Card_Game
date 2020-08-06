@@ -15,35 +15,33 @@ import java.util.Collections;
  * @author dancye
  * @modifier Puru Dhingra, 6 August, 2020
  */
-public class GroupOfCards 
+public class GroupOfCards
 {
     private ArrayList <Card> deck;
-    
-    public GroupOfCards() 
+
+    public GroupOfCards()
     {
-        // TODO - implement GroupOfCards.GroupOfCards
-	throw new UnsupportedOperationException();
+        deck = new ArrayList<>();
+        for (Card.Suit suit : Card.Suit.values()) {
+            for (Card.Rank rank : Card.Rank.values()) {
+                deck.add(new Card(suit,rank));
+            }
+        }
     }
     
+    public Card showTopCard()
+    {
+        return deck.remove(0);
+    }
+
     public void shuffle()
     {
         Collections.shuffle(deck);
     }
 
-    public Card showTopCard() {
-	// TODO - implement GroupOfCards.showTopCard
-	throw new UnsupportedOperationException();
+    public int indexOf(Card.Rank rank)
+    {
+        return rank.ordinal();
     }
 
-	/**
-	 * 
-	 * @param rank
-	 */
-	public int indexOf(Card.Rank rank) {
-		// TODO - implement GroupOfCards.indexOf
-		throw new UnsupportedOperationException();
-	}
-
-	
-    
 }//end class
