@@ -10,7 +10,7 @@ package ca.sheridancollege.project;
  * enough to be instantiated for any Card game. Students wishing to add to the code
  * should remember to add themselves as a modifier.
  * @author dancye, 2018
- * @modifier Harleen Kaur Grewal, 17 July 2020
+ * @modifier Vikas Rai, 6 August 2020
  */
 public class Card 
 {
