@@ -1,20 +1,14 @@
 package ca.sheridancollege.project;
 
 /**
- * 
- * @author Harleen Kaur Grewal, 17July 2020
+ * The class containing main method
+ * @author Harleen Kaur Grewal, 17 July 2020
  */
-public class War {
-
-	/**
-	 * 
-	 * @param args
-	 */
-	public void main(String[] args) {
-		// TODO - implement War.main
-		//throw new UnsupportedOperationException();
-                Game obj=new Game();
-                obj.play();
-	}
-
+public class War 
+{
+    public static void main(String[] args) 
+    {
+        Game obj=new Game();
+        obj.play();
+    }
 }

@@ -6,7 +6,7 @@
 package ca.sheridancollege.project;
 
 /**
- * A class that models each Player in the game. Players have an identifier, which should be unique.
+ * A class that models players and have methods related to the players
  * @author dancye, 2018
  * @modifier Vikas Rai, 6 August 2020
  */
@@ -14,6 +14,7 @@ public class Player
 {
     private String playerID; //the unique ID for this player
     
+    //Parametrized constructor
     public Player(String name)
     {
         setPlayerID(name);
@@ -32,6 +33,7 @@ public class Player
             playerID = givenID;
     }
     
+    //Method to check uniqueness of the player's names
     public void check(Player player)
     {
         if (playerID.equals(player.playerID))

@@ -6,15 +6,12 @@
 package ca.sheridancollege.project;
 
 /**
- * A class to be used as the base Card class for the project. Must be general
- * enough to be instantiated for any Card game. Students wishing to add to the code
- * should remember to add themselves as a modifier.
- * @author dancye, 2018
- * @modifier Vikas Rai, 6 August 2020
+ *The basic Card class
+ *@author dancye, 2018
+ *@modifier Harleen Grewal, 17 July 2020
  */
 public class Card 
 {
-
 	private Rank rank;
 	private Suit suit;
         
@@ -22,31 +19,33 @@ public class Card
         public enum Rank{ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING};
 
 	/**
-	 * 
+	 * Parametrized constructor
 	 * @param s
 	 * @param r
 	 */
-	public Card(Suit s, Rank r) {
-		// TODO - implement Card.Card
-		//throw new UnsupportedOperationException();
-                setSuit(s);
-                setRank(r);
+	public Card(Suit s, Rank r) 
+        {	
+            setSuit(s);
+            setRank(r);
 	}
         
-        public Rank getRank() {
-        return this.rank;
+        public Rank getRank() 
+        {
+            return this.rank;
         }
 
-        public Suit getSuit() {
+        public Suit getSuit() 
+        {
             return this.suit;
         }
 
-        public void setRank(Rank rank) {
+        public void setRank(Rank rank) 
+        {
             this.rank = rank;
         }
 
-        public void setSuit(Suit suit) {
+        public void setSuit(Suit suit) 
+        {
             this.suit = suit;
-        }
-    
+        } 
 }

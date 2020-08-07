@@ -9,39 +9,42 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 /**
- * A concrete class that represents any grouping of cards for a Game.
- * HINT, you might want to subclass this more than once.
- * The group of cards has a maximum size attribute which is flexible for reuse.
+ * A class that models our deck and contains methods related to our deck.
  * @author dancye
- * @modifier Puru Dhingra, 6 August, 2020
+ * @modifier Puru Dhingra, 6 August 2020
  */
 public class GroupOfCards
 {
     private ArrayList <Card> deck;
 
+    //Default constructor
     public GroupOfCards()
     {
         deck = new ArrayList<>();
-        for (Card.Suit suit : Card.Suit.values()) {
-            for (Card.Rank rank : Card.Rank.values()) {
+        for (Card.Suit suit : Card.Suit.values()) 
+        {
+            for (Card.Rank rank : Card.Rank.values()) 
+            {
                 deck.add(new Card(suit,rank));
             }
         }
     }
     
+    //Method used to pull cards
     public Card showTopCard()
     {
         return deck.remove(0);
     }
 
+    //Method used to shuffle the deck
     public void shuffle()
     {
         Collections.shuffle(deck);
     }
 
+    //Method that returns the index number of the Card
     public int indexOf(Card.Rank rank)
     {
         return rank.ordinal();
     }
-
 }//end class
